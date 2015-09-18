@@ -1,0 +1,89 @@
+bgnd_exec_update_interval: 2
+case_user_sym_search: FALSE
+coverage_color_r_back: 33619712
+coverage_color_r_fore: 117440512
+coverage_color_rw_back: 100598015
+coverage_color_rw_fore: 201326591
+coverage_color_rwx_back: 50331903
+coverage_color_rwx_fore: 100598015
+coverage_color_rx_back: 50331903
+coverage_color_rx_fore: 33619712
+coverage_color_w_back: 33488896
+coverage_color_w_fore: 201326591
+coverage_color_wx_back: 50331903
+coverage_color_wx_fore: 33488896
+coverage_color_x_back: 50331903
+coverage_color_x_fore: 201326591
+desktop_color_exe_backgr: 50331903
+desktop_color_exe_foregr: 201326591
+desktop_double_height_toolbar: FALSE
+desktop_fontsize: 10
+screen_window.rectangle: (0,0,1440,878)
+source_display_coverage: FALSE
+source_display_profiling: FALSE
+source_profile_display_mode: 2
+srcwin_asm_hex_opcodes: TRUE
+srcwin_autoswitch: FALSE
+srcwin_bubble_spy_size_limit: 1024
+srcwin_stepmode: 1
+srcwin_symbolic_asm: TRUE
+srcwin_viewmode: 1
+task_toolbar_config1: 27 1 28 1 21 1 80 1 1 1 0 1 3 1 2 1 4 1 5 1 6 1 62 1 7 1 8 1 10 1 11 1 57 1 12 0 13 0 14 0 16 0 17 0 19 0 20 0 9 0 22 0 23 0 25 1 26 0 31 0 32 0 34 0 33 0 
+task_toolbar_config2: 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 53 0 54 0 55 0 56 0 61 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 74 0 75 0 76 0 
+task_toolbar_config3: 77 0 78 0 79 0 81 0 82 0 83 0 84 0 85 0 86 0 87 0 90 0 
+task_toolbar_container: TRUE
+task_toolbar_container.rectangle: (0,0,1270,71)
+terminal: 0
+terminal.#0.local_echo: TRUE
+terminal.#0.map_linefeed: TRUE
+terminal.#0.rectangle: (162,108,522,348)
+terminal.Default.height: 24
+terminal.Default.width: 80
+terminal.FSS 0.local_echo: TRUE
+terminal.FSS 0.map_linefeed: TRUE
+terminal.FSS 0.rectangle: (140,109,440,309)
+terminal.n_windows: 1
+terminal0: FSS 0
+terminal1: FSS 0
+toolbox_dialog: 0
+toolbox_dialog.rectangle: (560,21,732,123)
+tracecfg_tmode: 0
+window_command: 1
+window_command.rectangle: (7,414,818,733)
+window_memory.defaults.base_type: unsigned short
+window_memory.defaults.display_mode: x
+window_memory.defaults.do_auto_refresh: 1
+window_memory.defaults.highlight_mode: 0
+window_memory.defaults.initial_position: 1
+window_memory.defaults.initial_position.rectangle: (832,543,1411,733)
+window_memory.defaults.n_columns: 6
+window_memory.defaults.n_rows: 6
+window_memory.defaults.start_address: 0x0
+window_memory.n_windows: 1
+window_memory0: 1
+window_memory0.auto_refresh: 1
+window_memory0.base_type: unsigned short
+window_memory0.display_mode: x
+window_memory0.highlight_mode: 0
+window_memory0.n_columns: 6
+window_memory0.n_rows: 6
+window_memory0.rectangle: (832,543,1411,733)
+window_memory0.start_address: 0x0
+window_memory0.toolbar_state: 2
+window_register: 1
+window_register.n_windows: 1
+window_register.rectangle: (832,27,1411,253)
+window_register0: 1
+window_register0.data: 
+window_register0.group: FALSE
+window_source: 1
+window_source.rectangle: (7,27,795,364)
+window_source_address1: 
+window_source_address2: 
+window_source_address3: 
+window_source_address4: 
+window_source_address5: 
+window_stack: 1
+window_stack.rectangle: (832,285,1411,493)
+window_symreg: 0
+window_trace: 0

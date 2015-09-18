@@ -1,0 +1,4 @@
+-G "Z:\Documents\ede\dev5213cf\"
+-err "echo.err"
+-r
+-f "echo.mak"

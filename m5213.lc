@@ -1,0 +1,13 @@
+--      SRAM size 32KB (DEV5213CF) located @ 0x0000
+MEMORY  (            #00007FFF);
+--		locate Vectortable @ 0x0000
+LOCATE  ( S_vtbl :   #00000000);
+--		locate Initialisation Code @ 0x0800
+LOCATE	( S_cstart : #00000800);
+--		locate Code @ 0x1000
+LOCATE  ( {code} :   #00001000);
+--		locate Heap @ 0x4000
+LOCATE  ( {data} :   #00004000);
+
+
+
