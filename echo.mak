@@ -23,7 +23,7 @@ OPT_XVW = -tcfg "bdmcf.cfg" -D dev,usb1 -C 5213 -i --load_application_download=t
 
 all : "$(PROJ).abs"
 
-"cstart.ol" : "cstart.asm" <1442561367>
+"cstart.ol" : "cstart.asm" <1442821191>
 	@echo Assembling "cstart.asm"
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\asm5213.exe" "cstart.asm" $(OPT_AS)
@@ -32,7 +32,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_AS)
                           EOF
 
-"main.ol" : "main.c" "tools.h" "types.h" "ips.h" <1442573675>
+"main.ol" : "main.c" "tools.h" "types.h" "ips.h" <1442821191>
 	@echo Compiling "main.c"
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\c5213.exe" "main.c" $(OPT_CC)
@@ -41,7 +41,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_CC)
                           EOF
 
-"vtbl.ol" : "vtbl.c" "isr.h" <1442570146>
+"vtbl.ol" : "vtbl.c" "isr.h" <1442821191>
 	@echo Compiling "vtbl.c"
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\c5213.exe" "vtbl.c" $(OPT_CC)
@@ -50,7 +50,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_CC)
                           EOF
 
-"isr.ol" : "isr.c" "isr.h" "types.h" <1442570146>
+"isr.ol" : "isr.c" "isr.h" "types.h" <1442821191>
 	@echo Compiling "isr.c"
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\c5213.exe" "isr.c" $(OPT_CC)
@@ -59,7 +59,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_CC)
                           EOF
 
-"tools.ol" : "tools.c" "tools.h" "types.h" "ips.h" <1442573639>
+"tools.ol" : "tools.c" "tools.h" "types.h" "ips.h" <1442821191>
 	@echo Compiling "tools.c"
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\c5213.exe" "tools.c" $(OPT_CC)
@@ -68,7 +68,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_CC)
                           EOF
 
-"$(PROJ).ab" : "cstart.ol" "main.ol" "vtbl.ol" "isr.ol" "tools.ol" <1442573639>
+"$(PROJ).ab" : "cstart.ol" "main.ol" "vtbl.ol" "isr.ol" "tools.ol" <1442821191>
 	@echo Linking File $@
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\llink.exe" $(match .ol $!) $(match .ln $!) $(match .lln $!) $(OPT_LK) -o $@
@@ -78,7 +78,7 @@ all : "$(PROJ).abs"
                           $(EMPTY) $(OPT_LK) -o $@
                           EOF
 
-"$(PROJ).abs" : "$(PROJ).ab" <1442561367>
+"$(PROJ).abs" : "$(PROJ).ab" <1442821191>
 	@echo Generating Form IEEE 695 file $@
                           ifdef BUILD_VERBOSE
                           @echo "$(PRODDIR)\bin\form695.exe" $! $(OPT_OP) -o $@

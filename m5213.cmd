@@ -9,7 +9,7 @@ reset
 ; 		Disable Flash via FLASHBAR	 
 put_control 0xC04 0x0				
 
-;		Enable SRAM and mark content as code and data via RAMBAR
+;		Enable SRAM @ 0x0 and mark content as code and data
 put_control 0xC05 0x00000021
                     
 ; 		Set Vectortable to SRAM start

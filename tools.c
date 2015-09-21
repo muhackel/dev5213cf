@@ -23,7 +23,7 @@ void systeminit()
 	//Fix PLL Instability Bug. 
 	(*(vuint8 *)(0x40120006)) |= 0x04;
     // set SCM_IPSBAR to __IPSBAR and Enable (1)
-	MCF_SCM_IPSBAR = __IPSBAR | 1;
+	MCF_SCM_IPSBAR = MCF_SCM_IPSBAR_BA(__IPSBAR) | MCF_SCM_IPSBAR_V;
     // set UART0 memory to Supervisor and User R/W
 	MCF_SACU_PARC2 = 0x60;
     // set UART0 pins in UART Mode

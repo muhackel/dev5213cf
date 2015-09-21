@@ -1,0 +1,9 @@
+# ignore backup files
+*.bak
+# ignore compiled files
+*.ol
+*.ab
+*.s
+*.abs
+*.map
+*.err

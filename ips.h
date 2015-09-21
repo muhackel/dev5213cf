@@ -138,6 +138,58 @@
 #define MCF_GPIO_PSRR       (*(vuint32*)(__IPSBAR + 0x100078))
 #define MCF_GPIO_PDSR       (*(vuint32*)(__IPSBAR + 0x10007C))
 
+/* Bit definitions and macros for MCF_SCM_IPSBAR */
+#define MCF_SCM_IPSBAR_V       (0x00000001)
+#define MCF_SCM_IPSBAR_BA(x)   ((x)&0xC0000000)
+
+/* Bit definitions and macros for MCF_SCM_RAMBAR */
+#define MCF_SCM_RAMBAR_BDE     (0x00000200)
+#define MCF_SCM_RAMBAR_BA(x)   ((x)&0xFFFF0000)
+
+/* Bit definitions and macros for MCF_SCM_CRSR */
+#define MCF_SCM_CRSR_CWDR      (0x20)
+#define MCF_SCM_CRSR_EXT       (0x80)
+
+/* Bit definitions and macros for MCF_SCM_CWCR */
+#define MCF_SCM_CWCR_CWTIC     (0x01)
+#define MCF_SCM_CWCR_CWTAVAL   (0x02)
+#define MCF_SCM_CWCR_CWTA      (0x04)
+#define MCF_SCM_CWCR_CWT(x)    (((x)&0x07)<<3)
+#define MCF_SCM_CWCR_CWRI      (0x40)
+#define MCF_SCM_CWCR_CWE       (0x80)
+
+/* Bit definitions and macros for MCF_SCM_LPICR */
+#define MCF_SCM_LPICR_XIPL(x)  (((x)&0x07)<<4)
+#define MCF_SCM_LPICR_ENBSTOP  (0x80)
+
+/* Bit definitions and macros for MCF_SCM_CWSR */
+#define MCF_SCM_CWSR_CWSR(x)   (((x)&0xFF)<<0)
+
+/* Bit definitions and macros for MCF_SCM_PPMRH */
+#define MCF_SCM_PPMRH_CDPORTS  (0x00000001)
+#define MCF_SCM_PPMRH_CDEPORT  (0x00000002)
+#define MCF_SCM_PPMRH_CDPIT0   (0x00000008)
+#define MCF_SCM_PPMRH_CDPIT1   (0x00000010)
+#define MCF_SCM_PPMRH_CDADC    (0x00000080)
+#define MCF_SCM_PPMRH_CDGPT    (0x00000100)
+#define MCF_SCM_PPMRH_CDPWN    (0x00000200)
+#define MCF_SCM_PPMRH_CDFCAN   (0x00000400)
+#define MCF_SCM_PPMRH_CDCFM    (0x00000800)
+
+/* Bit definitions and macros for MCF_SCM_PPMRL */
+#define MCF_SCM_PPMRL_CDG      (0x00000002)
+#define MCF_SCM_PPMRL_CDEIM    (0x00000008)
+#define MCF_SCM_PPMRL_CDDMA    (0x00000010)
+#define MCF_SCM_PPMRL_CDUART0  (0x00000020)
+#define MCF_SCM_PPMRL_CDUART1  (0x00000040)
+#define MCF_SCM_PPMRL_CDUART2  (0x00000080)
+#define MCF_SCM_PPMRL_CDI2C    (0x00000200)
+#define MCF_SCM_PPMRL_CDQSPI   (0x00000400)
+#define MCF_SCM_PPMRL_CDDTIM0  (0x00002000)
+#define MCF_SCM_PPMRL_CDDTIM1  (0x00004000)
+#define MCF_SCM_PPMRL_CDDTIM2  (0x00008000)
+#define MCF_SCM_PPMRL_CDDTIM3  (0x00010000)
+#define MCF_SCM_PPMRL_CDINTC0  (0x00020000)
 
 /* Bit definitions and macros for MCF_UART_UMR */
 #define MCF_UART_UMR_BC(x)            (((x)&0x03)<<0)
