@@ -191,6 +191,21 @@
 #define MCF_SCM_PPMRL_CDDTIM3  (0x00010000)
 #define MCF_SCM_PPMRL_CDINTC0  (0x00020000)
 
+/* Bit definitions and macros for MCF_SACU_PARCn */
+#define MCF_SACU_PARC_AC0(x)   ((x)&0x07)
+#define MCF_SACU_PARC_AC1(x)   (((x)&0x07)<<4)
+#define MCF_SACU_PARC_AC_N_N   (0x07)
+#define MCF_SACU_PARC_AC_R_N   (0x01)
+#define MCF_SACU_PARC_AC_R_R   (0x02)
+#define MCF_SACU_PARC_AC_RW_N  (0x00)
+#define MCF_SACU_PARC_AC_RW_R  (0x05)
+#define MCF_SACU_PARC_AC_RW_RW (0x04)
+
+#define MCF_SACU_PARC_L0       (0x08)
+#define MCF_SACU_PARC_L1       (0x80)
+
+
+
 /* Bit definitions and macros for MCF_UART_UMR */
 #define MCF_UART_UMR_BC(x)            (((x)&0x03)<<0)
 #define MCF_UART_UMR_PT               (0x04)

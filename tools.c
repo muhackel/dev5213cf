@@ -10,7 +10,7 @@ void uart0init(uint32 systemClockKHz, uint32 baudRate)
  	MCF_UART_UCR(0)  = MCF_UART_UCR_RESET_RX;	//reset Transiever
  	MCF_UART_UCR(0)  = MCF_UART_UCR_RESET_MR;	//reset mode Pointer
  	MCF_UART_UACR(0) = 0;							//disable Interrupts
- 	MCF_UART_UBG1(0) = ((ubgs >> 8) & 0xFF);		//set baudrate
+  	MCF_UART_UBG1(0) = ((ubgs >> 8) & 0xFF);		//set baudrate
  	MCF_UART_UBG2(0) = (ubgs & 0xFF);				//set baudrate
 	MCF_UART_UCSR(0) = MCF_UART_UCSR_RCS_SYS_CLK | MCF_UART_UCSR_TCS_SYS_CLK; //use Prescaled Internal Clock as Source
 	MCF_UART_UMR(0)  = MCF_UART_UMR_BC_8 | MCF_UART_UMR_PM_NONE; // Set UMR1 to 8 Bit No Parity Points now to UMR2 
@@ -24,8 +24,8 @@ void systeminit()
 	(*(vuint8 *)(0x40120006)) |= 0x04;
     // set SCM_IPSBAR to __IPSBAR and Enable (1)
 	MCF_SCM_IPSBAR = MCF_SCM_IPSBAR_BA(__IPSBAR) | MCF_SCM_IPSBAR_V;
-    // set UART0 memory to Supervisor and User R/W
-	MCF_SACU_PARC2 = 0x60;
+    // set UART0 memory to Supervisor/User R/W and lock
+	MCF_SACU_PARC2 = MCF_SACU_PARC_AC1(MCF_SACU_PARC_AC_RW_RW) | MCF_SACU_PARC_L1;
     // set UART0 pins in UART Mode
 	MCF_GPIO_PUAPAR =  MCF_GPIO_PUAPAR_CTS0_CTS0 | MCF_GPIO_PUAPAR_RTS0_RTS0 | MCF_GPIO_PUAPAR_RXD0_RXD0 | MCF_GPIO_PUAPAR_TXD0_TXD0;
 }
