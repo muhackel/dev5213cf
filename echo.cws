@@ -68,7 +68,7 @@ window_memory0.highlight_mode: 0
 window_memory0.n_columns: 6
 window_memory0.n_rows: 6
 window_memory0.rectangle: (832,543,1411,733)
-window_memory0.start_address: 0x0
+window_memory0.start_address: 0xFFFFFFE8
 window_memory0.toolbar_state: 2
 window_register: 1
 window_register.n_windows: 1

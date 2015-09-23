@@ -1,6 +1,6 @@
 ;Codewright Project Space File (do not remove or modify this line)
 [State]
-StateWindowFrame=54,1,1280,821,0x43097fca
+StateWindowFrame=1364,84,1280,821,0x43097fca
 _StateHistory=PROJECTS,'.\echo.pjt'
 _RestoreProject='.\echo.pjt'
 ProjSpaceFlags=0x00000000, 1

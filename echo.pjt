@@ -9,14 +9,10 @@ SrchSetFlags=0x0006600b
 SrchSetAgainFlags=0x00076009,0
 SrchSetAgainFlags=0x0206600b,1
 FileSortMode=0x0
-_StateView='Z:\Documents\ede\dev5213cf\main.c',75,75,898,260,-1,-1,16,62,4,1,1,'',0x00100008,0,80,0,0,''
-_StateBuffer='Z:\Documents\ede\dev5213cf\main.c',0x0c00048e,16,62,25,'5 9','',0x0,'',1,72,1,0
-_StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\main.c'
+_StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\main.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h','Z:\Documents\ede\dev5213cf\ips.h'
 _StateHistory=EDITFILE,'Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\ips.h','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h'
-_StateHistory=DOCUMENTVISIT,'5           37          Z:\Documents\ede\dev5213cf\main.c','22          29          Z:\Documents\ede\dev5213cf\cstart.asm','5           37          Z:\Documents\ede\dev5213cf\main.c','19          1           Z:\Documents\ede\dev5213cf\m5213.cmd','6           46          Z:\Documents\ede\dev5213cf\cstart.asm','1           1           Z:\Documents\ede\dev5213cf\m5213.lc','13          16          Z:\Documents\ede\dev5213cf\main.c','28          26          Z:\Documents\ede\dev5213cf\tools.c','20          28          Z:\Documents\ede\dev5213cf\main.c','28          26          Z:\Documents\ede\dev5213cf\tools.c'
+_StateHistory=DOCUMENTVISIT,'40          34          Z:\Documents\ede\dev5213cf\tools.c','22          55          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','22          56          Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','7           1           Z:\Documents\ede\dev5213cf\tools.h','22          48          Z:\Documents\ede\dev5213cf\ips.h'
 _StateDocumentVisit=10
-
-
 
 [Editor]
 VCSProject=''

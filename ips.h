@@ -217,7 +217,7 @@
 #define MCF_SACU_PARC_AC_R_R   (0x02)
 #define MCF_SACU_PARC_AC_RW_N  (0x00)
 #define MCF_SACU_PARC_AC_RW_R  (0x05)
-#define MCF_SACU_PARC_AC_RW_RW (0x04)
+#define MCF_SACU_PARC_AC_RW_RW (0x06)
 
 #define MCF_SACU_PARC_L0       (0x08)
 #define MCF_SACU_PARC_L1       (0x80)
