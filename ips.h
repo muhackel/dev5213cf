@@ -33,17 +33,17 @@
 #define MCF_SACU_PPMRS		(*(vuint8 *)(__IPSBAR + 0x0021))
 #define MCF_SACU_PPMRC		(*(vuint8 *)(__IPSBAR + 0x0022))
 #define MCF_SACU_IPSBMT		(*(vuint8 *)(__IPSBAR + 0x0023))
-#define MCF_SACU_PARC0		(*(vuint8 *)(__IPSBAR + 0x0024))
-#define MCF_SACU_PARC1		(*(vuint8 *)(__IPSBAR + 0x0025))
-#define MCF_SACU_PARC2		(*(vuint8 *)(__IPSBAR + 0x0026))
-#define MCF_SACU_PARC3		(*(vuint8 *)(__IPSBAR + 0x0027))
-#define MCF_SACU_PARC4		(*(vuint8 *)(__IPSBAR + 0x0028))
-#define MCF_SACU_PARC5		(*(vuint8 *)(__IPSBAR + 0x0029))
-#define MCF_SACU_PARC6		(*(vuint8 *)(__IPSBAR + 0x002A))
-#define MCF_SACU_PARC7		(*(vuint8 *)(__IPSBAR + 0x002B))
-#define MCF_SACU_PARC8		(*(vuint8 *)(__IPSBAR + 0x002C))
-#define MCF_SACU_GPARC0		(*(vuint8 *)(__IPSBAR + 0x0030))
-#define MCF_SACU_GPARC1		(*(vuint8 *)(__IPSBAR + 0x0031))
+#define MCF_SACU_PACR0		(*(vuint8 *)(__IPSBAR + 0x0024))
+#define MCF_SACU_PACR1		(*(vuint8 *)(__IPSBAR + 0x0025))
+#define MCF_SACU_PACR2		(*(vuint8 *)(__IPSBAR + 0x0026))
+#define MCF_SACU_PACR3		(*(vuint8 *)(__IPSBAR + 0x0027))
+#define MCF_SACU_PACR4		(*(vuint8 *)(__IPSBAR + 0x0028))
+#define MCF_SACU_PACR5		(*(vuint8 *)(__IPSBAR + 0x0029))
+#define MCF_SACU_PACR6		(*(vuint8 *)(__IPSBAR + 0x002A))
+#define MCF_SACU_PACR7		(*(vuint8 *)(__IPSBAR + 0x002B))
+#define MCF_SACU_PACR8		(*(vuint8 *)(__IPSBAR + 0x002C))
+#define MCF_SACU_GPACR0		(*(vuint8 *)(__IPSBAR + 0x0030))
+#define MCF_SACU_GPACR1		(*(vuint8 *)(__IPSBAR + 0x0031))
 
 
 //Interupt Controller Modul Register
@@ -209,18 +209,18 @@
 #define MCF_SCM_PPMRL_CDDTIM3  (0x00010000)
 #define MCF_SCM_PPMRL_CDINTC0  (0x00020000)
 
-/* Bit definitions and macros for MCF_SACU_PARCn */
-#define MCF_SACU_PARC_AC0(x)   ((x)&0x07)
-#define MCF_SACU_PARC_AC1(x)   (((x)&0x07)<<4)
-#define MCF_SACU_PARC_AC_N_N   (0x07)
-#define MCF_SACU_PARC_AC_R_N   (0x01)
-#define MCF_SACU_PARC_AC_R_R   (0x02)
-#define MCF_SACU_PARC_AC_RW_N  (0x00)
-#define MCF_SACU_PARC_AC_RW_R  (0x05)
-#define MCF_SACU_PARC_AC_RW_RW (0x06)
+/* Bit definitions and macros for MCF_SACU_PACRn */
+#define MCF_SACU_PACR_AC0(x)   ((x)&0x07)
+#define MCF_SACU_PACR_AC1(x)   (((x)&0x07)<<4)
+#define MCF_SACU_PACR_AC_N_N   (0x07)
+#define MCF_SACU_PACR_AC_R_N   (0x01)
+#define MCF_SACU_PACR_AC_R_R   (0x02)
+#define MCF_SACU_PACR_AC_RW_N  (0x00)
+#define MCF_SACU_PACR_AC_RW_R  (0x05)
+#define MCF_SACU_PACR_AC_RW_RW (0x06)
 
-#define MCF_SACU_PARC_L0       (0x08)
-#define MCF_SACU_PARC_L1       (0x80)
+#define MCF_SACU_PACR_L0       (0x08)
+#define MCF_SACU_PACR_L1       (0x80)
 
 
 /* Bit definitions and macros for MCF_INTC_IPRH */
