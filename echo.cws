@@ -18,7 +18,7 @@ desktop_color_exe_backgr: 50331903
 desktop_color_exe_foregr: 201326591
 desktop_double_height_toolbar: FALSE
 desktop_fontsize: 10
-screen_window.rectangle: (0,0,1440,878)
+screen_window.rectangle: (0,0,1920,1200)
 source_display_coverage: FALSE
 source_display_profiling: FALSE
 source_profile_display_mode: 2
@@ -49,13 +49,13 @@ toolbox_dialog: 0
 toolbox_dialog.rectangle: (560,21,732,123)
 tracecfg_tmode: 0
 window_command: 1
-window_command.rectangle: (7,414,818,733)
+window_command.rectangle: (9,565,1090,1001)
 window_memory.defaults.base_type: unsigned short
 window_memory.defaults.display_mode: x
 window_memory.defaults.do_auto_refresh: 1
 window_memory.defaults.highlight_mode: 0
 window_memory.defaults.initial_position: 1
-window_memory.defaults.initial_position.rectangle: (832,543,1411,733)
+window_memory.defaults.initial_position.rectangle: (1109,742,1881,1001)
 window_memory.defaults.n_columns: 6
 window_memory.defaults.n_rows: 6
 window_memory.defaults.start_address: 0x0
@@ -67,23 +67,23 @@ window_memory0.display_mode: x
 window_memory0.highlight_mode: 0
 window_memory0.n_columns: 6
 window_memory0.n_rows: 6
-window_memory0.rectangle: (832,543,1411,733)
+window_memory0.rectangle: (1109,742,1881,1001)
 window_memory0.start_address: 0xFFFFFFE8
 window_memory0.toolbar_state: 2
 window_register: 1
 window_register.n_windows: 1
-window_register.rectangle: (832,27,1411,253)
+window_register.rectangle: (1109,36,1881,345)
 window_register0: 1
 window_register0.data: 
 window_register0.group: FALSE
 window_source: 1
-window_source.rectangle: (7,27,795,364)
+window_source.rectangle: (9,36,1060,497)
 window_source_address1: 
 window_source_address2: 
 window_source_address3: 
 window_source_address4: 
 window_source_address5: 
 window_stack: 1
-window_stack.rectangle: (832,285,1411,493)
+window_stack.rectangle: (1109,389,1881,673)
 window_symreg: 0
 window_trace: 0

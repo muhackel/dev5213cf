@@ -4,15 +4,13 @@ ConfigSetExtMode=2
 ProjSetConfigFlags=0x04110940
 
 [State]
-SysSetCwd='Z:\Documents\ede\dev5213cf'
+SysSetCwd='Y:\documents\arbeit\mcf5213\dev5213cf'
 SrchSetFlags=0x0006600b
 SrchSetAgainFlags=0x00076009,0
 SrchSetAgainFlags=0x0206600b,1
 FileSortMode=0x0
 _StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\main.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h','Z:\Documents\ede\dev5213cf\ips.h'
 _StateHistory=EDITFILE,'Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\ips.h','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h'
-_StateHistory=DOCUMENTVISIT,'40          34          Z:\Documents\ede\dev5213cf\tools.c','22          55          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','22          56          Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','7           1           Z:\Documents\ede\dev5213cf\tools.h','22          48          Z:\Documents\ede\dev5213cf\ips.h'
-_StateDocumentVisit=10
 
 [Editor]
 VCSProject=''
@@ -95,10 +93,10 @@ VCSSetCmd=VCS_REMOVE_ID,'del /f "%b%{??v|___}e"',0x8000040
 
 
 [Ede]
-Toolchain=c:\program files\tasking\c68k v10.0\etc\c68k.dol
-ToolchainName=TASKING Tools for 68K/ColdFire v10.0 r4
-ProjectDir=z:\documents\ede\dev5213cf
-EdeVersion=3.4r4 (Build 123)
+Toolchain=c:\program files\tasking\c68k v10.0r8\etc\c68k.dol
+ToolchainName=TASKING Tools for 68K/ColdFire v10.0r8
+ProjectDir=y:\documents\arbeit\mcf5213\dev5213cf
+EdeVersion=99.9r9 (Build 150)
 CodeWrightVersion=6.5b
 DefBuildSettings=True
 SaveFiles=True
@@ -112,6 +110,9 @@ UserMakefileName=
 UseMakeOptions=False
 MakeOptions=
 CheckTarget=True
+ExtDebugger=False
+ExtDebuggerName=
+UseDOSShell=False
 SaveOptionMethod=0
 SaveOptionFileName=
 LoadOptionFileName=
@@ -132,13 +133,13 @@ LibDir1=$(PRODDIR)\rtlibs
 Cpu=MCF5213
 CompOptim=CompOptno
 LkExtCommandFile=1
-LkExtCommandFileName=z:\documents\ede\dev5213cf\m5213.lc
+LkExtCommandFileName=y:\documents\arbeit\mcf5213\dev5213cf\m5213.lc
 XvwSim=0
-XvwBdm=1
+XvwBdm_Multilink=1
 XvwUsb=1
 XvwNone=0
 XvwSerialPort=XvwUsb1
-XvwPlaybackEmulator=z:\documents\ede\dev5213cf\m5213.cmd
+XvwPlaybackEmulator=y:\documents\arbeit\mcf5213\dev5213cf\m5213.cmd
 XvwPlaybackStepByStep=1
 
 [Options]
