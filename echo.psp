@@ -1,8 +1,8 @@
 ;Codewright Project Space File (do not remove or modify this line)
 [State]
 StateWindowFrame=184,75,1080,590,0x43097fca
-_StateHistory=PROJECTS,'.\echo.pjt','E:\dev5213cf-master\echo.pjt'
-_RestoreProject='E:\dev5213cf-master\echo.pjt'
+_StateHistory=PROJECTS,'.\echo.pjt'
+_RestoreProject='.\echo.pjt'
 ProjSpaceFlags=0x00000000, 1
 
 [Project]
@@ -10,6 +10,7 @@ ConfigSetUserWorkspace=''
 ConfigSetUserWorkspaceParser=''
 ConfigSetUserWorkspaceTimeStamp=0
 ConfigSetUserWorkspaceAutoSync=0
+
 
 
 
