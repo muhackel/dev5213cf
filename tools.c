@@ -5,18 +5,17 @@
 void uart0init(uint32 systemClockKHz, uint32 baudRate)
 {
 	uint16 ubgs;
-	
- 	MCF_UART_UCR(0)  = MCF_UART_UCR_RESET_TX;	//reset Reciever
- 	MCF_UART_UCR(0)  = MCF_UART_UCR_RESET_RX;	//reset Transiever
- 	MCF_UART_UCR(0)  = MCF_UART_UCR_RESET_MR;	//reset mode Pointer
- 	MCF_UART_UACR(0) = 0;							//disable Interrupts
+	writeByte(UCR0,  0x30);	//reset Reciever
+	writeByte(UCR0,  0x20);	//reset Transiever
+	writeByte(UCR0,  0x10);	//reset mode Pointer
+    writeByte(UACR0, 0x00); //disable Interrupts
  	ubgs = (uint16)((systemClockKHz * 1000)/(baudRate * 32));
-  	MCF_UART_UBG1(0) = ((ubgs >> 8) & 0xFF);		//set baudrate
- 	MCF_UART_UBG2(0) = (ubgs & 0xFF);				//set baudrate
-	MCF_UART_UCSR(0) = MCF_UART_UCSR_RCS_SYS_CLK | MCF_UART_UCSR_TCS_SYS_CLK; //use Prescaled Internal Clock as Source
-	MCF_UART_UMR(0)  = MCF_UART_UMR_BC_8 | MCF_UART_UMR_PM_NONE; // Set UMR1 to 8 Bit No Parity Points now to UMR2 
-	MCF_UART_UMR(0)  = MCF_UART_UMR_SB_STOP_BITS_1 | MCF_UART_UMR_CM_NORMAL; // Set UMR2 to 1 Stopbit with channlemode Normal
-	MCF_UART_UCR(0)  = MCF_UART_UCR_RX_ENABLED | MCF_UART_UCR_TX_ENABLED; // Enable TX/RX
+  	writeByte(UBG10,(ubgs >> 8) & 0xFF);		//set baudrate MSB
+ 	writeByte(UBG20, ubgs & 0xFF);				//set baudrate LSB
+	writeByte(UCSR0, 0xDD); //use Prescaled Internal Clock as Source
+	writeByte(UMR10, 0x13);	// Set UMR01 to 8 Bit No Parity Points now to UMR02
+	writeByte(UMR20, 0x07); // Set UMR02 to 1 Stopbit with channlemode Normal
+	writeByte(UCR0,  0x05); // Enable TX/RX
 }
 
 void systeminit()
@@ -24,23 +23,23 @@ void systeminit()
 	//Fix PLL Instability Bug. 
 	(*(vuint8 *)(0x40120006)) |= 0x04;
     // set SCM_IPSBAR to __IPSBAR and Enable (1)
-	MCF_SCM_IPSBAR = MCF_SCM_IPSBAR_BA(__IPSBAR) | MCF_SCM_IPSBAR_V;
-    // set UART0 memory to Supervisor/User R/W 
-	MCF_SACU_PACR2 = MCF_SACU_PACR_AC1(MCF_SACU_PACR_AC_RW_RW); // removed lock ... Caused Accesserror ISRs 
-    // set UART0 pins in UART Mode ... while UART is the standartusage of pin GPIO is the resetvalue of controlregister
-	MCF_GPIO_PUAPAR =  MCF_GPIO_PUAPAR_CTS0_CTS0 | MCF_GPIO_PUAPAR_RTS0_RTS0 | MCF_GPIO_PUAPAR_RXD0_RXD0 | MCF_GPIO_PUAPAR_TXD0_TXD0;
+	writeLong(0x40000000, 0x40000001);
+	// set UART0 memory to Supervisor/User R/W 
+	writeByte(0x40000026, 0x60);
+	// set UART0 pins in UART Mode ... while UART is the standartusage of pin GPIO is the resetvalue of controlregister
+	writeByte(0x40100059, 0x55);
 }
 
 uint8 readUART()
 {
-	while (!(MCF_UART_USR(0) & MCF_UART_USR_RXRDY));    //lock while reciverbuffer empty
-	return MCF_UART_URB(0);                             //return symbol from recivebuffer
+	while (!(readByte(USR0) & 0x01));    //lock while reciverbuffer empty
+	return readByte(URB0);             //return symbol from recivebuffer
 }
 
 void writeUART(uint8 zeichen)
 {
-	while (!(MCF_UART_USR(0) & MCF_UART_USR_TXRDY));    //lock while transmitterbuffer full
-	MCF_UART_UTB(0) = zeichen;                          //write symbol in transmitterbuffer
+	while (!(readByte(USR0) & 0x04));    //lock while transmitterbuffer full
+	writeByte(UTB0, zeichen);           //write symbol in transmitterbuffer
 }
 
 void writeLine(char *line)
@@ -49,4 +48,34 @@ int i=0;
     while (line[i] != 0) {                            //while current symbol not NULL
         writeUART(line[i++]);                               //write symbol to UART and increment symbolindex
     }
+}
+
+void writeByte(uint32 adr, uint8 value)
+{
+   *((vuint8*)(adr)) = value;
+}
+
+void writeWord(uint32 adr, uint16 value)
+{
+	*((vuint16*)(adr)) = value;
+}
+
+void writeLong(uint32 adr, uint32 value)
+{
+   *((vuint32*)(adr)) = value;
+}
+
+uint8 readByte(uint32 adr)
+{
+	return (*((vuint8*)(adr)));
+}
+
+uint16 readWord(uint32 adr)
+{
+	return (*((vuint16*)(adr)));
+}
+
+uint32 readLong(uint32 adr)
+{
+	return (*((vuint32*)(adr)));
 }
