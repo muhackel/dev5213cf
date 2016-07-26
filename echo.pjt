@@ -4,7 +4,11 @@ ConfigSetExtMode=2
 ProjSetConfigFlags=0x04110940
 
 [State]
+<<<<<<< HEAD
 SysSetCwd='Z:\\'
+=======
+SysSetCwd='Y:\documents\arbeit\mcf5213\dev5213cf'
+>>>>>>> origin/master
 SrchSetFlags=0x0006600b
 SrchSetAgainFlags=0x00076009,0
 SrchSetAgainFlags=0x0206600b,1
@@ -13,8 +17,11 @@ _StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede
 _StateHistory=SEARCH,'\\\mac\home\documents\ede\dev5213cf'
 _StateHistory=REPLACE,'','z:\users\muhackel\documents\ede\dev5213cf'
 _StateHistory=EDITFILE,'Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\ips.h','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h'
+<<<<<<< HEAD
 _StateHistory=DOCUMENTVISIT,'32          42          Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','81          1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c'
 _StateDocumentVisit=10
+=======
+>>>>>>> origin/master
 
 [Editor]
 _RestoreSysFlags=0x43097fca, 0xfffffffc, 0
@@ -115,7 +122,11 @@ VCSSetCmd=VCS_REMOVE_ID,'del /f "%b%{??v|___}e"',0x8000040
 [Ede]
 Toolchain=c:\program files\tasking\c68k v10.0r8\etc\c68k.dol
 ToolchainName=TASKING Tools for 68K/ColdFire v10.0r8
+<<<<<<< HEAD
 ProjectDir=z:\users\muhackel\documents\ede\dev5213cf
+=======
+ProjectDir=y:\documents\arbeit\mcf5213\dev5213cf
+>>>>>>> origin/master
 EdeVersion=99.9r9 (Build 150)
 CodeWrightVersion=6.5b
 DefBuildSettings=True
@@ -153,13 +164,21 @@ LibDir1=$(PRODDIR)\rtlibs
 Cpu=MCF5213
 CompOptim=CompOptno
 LkExtCommandFile=1
+<<<<<<< HEAD
 LkExtCommandFileName=z:\users\muhackel\documents\ede\dev5213cf\m5213.lc
+=======
+LkExtCommandFileName=y:\documents\arbeit\mcf5213\dev5213cf\m5213.lc
+>>>>>>> origin/master
 XvwSim=0
 XvwBdm_Multilink=1
 XvwUsb=1
 XvwNone=0
 XvwSerialPort=XvwUsb1
+<<<<<<< HEAD
 XvwPlaybackEmulator=z:\users\muhackel\documents\ede\dev5213cf\m5213.cmd
+=======
+XvwPlaybackEmulator=y:\documents\arbeit\mcf5213\dev5213cf\m5213.cmd
+>>>>>>> origin/master
 XvwPlaybackStepByStep=1
 
 [Options]

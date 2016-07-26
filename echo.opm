@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -G "z:\users\muhackel\documents\ede\dev5213cf"
+=======
+-G "y:\documents\arbeit\mcf5213\dev5213cf"
+>>>>>>> origin/master
 -err "echo.err"
 -r
 -f "echo.mak"
