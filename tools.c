@@ -27,7 +27,7 @@ void systeminit()
 	MCF_SCM_IPSBAR = MCF_SCM_IPSBAR_BA(__IPSBAR) | MCF_SCM_IPSBAR_V;
     // set UART0 memory to Supervisor/User R/W 
 	MCF_SACU_PACR2 = MCF_SACU_PACR_AC1(MCF_SACU_PACR_AC_RW_RW); // removed lock ... Caused Accesserror ISRs 
-    // set UART0 pins in UART Mode
+    // set UART0 pins in UART Mode ... while UART is the standartusage of pin GPIO is the resetvalue of controlregister
 	MCF_GPIO_PUAPAR =  MCF_GPIO_PUAPAR_CTS0_CTS0 | MCF_GPIO_PUAPAR_RTS0_RTS0 | MCF_GPIO_PUAPAR_RXD0_RXD0 | MCF_GPIO_PUAPAR_TXD0_TXD0;
 }
 
@@ -49,5 +49,4 @@ int i=0;
     while (line[i] != 0) {                            //while current symbol not NULL
         writeUART(line[i++]);                               //write symbol to UART and increment symbolindex
     }
-
 }

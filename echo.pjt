@@ -4,17 +4,22 @@ ConfigSetExtMode=2
 ProjSetConfigFlags=0x04110940
 
 [State]
-SysSetCwd='Z:\Documents\ede\dev5213cf'
+SysSetCwd='Z:\\'
 SrchSetFlags=0x0006600b
 SrchSetAgainFlags=0x00076009,0
 SrchSetAgainFlags=0x0206600b,1
 FileSortMode=0x0
-_StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\main.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h','Z:\Documents\ede\dev5213cf\ips.h'
+_StateHistory=FILELIST,'Z:\Documents\ede\dev5213cf\cstart.asm','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\ips.h','Z:\Documents\ede\dev5213cf\tools.h','\\\Mac\HOME\Documents\ede\dev5213cf\main.c','Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak'
+_StateHistory=SEARCH,'\\\mac\home\documents\ede\dev5213cf'
+_StateHistory=REPLACE,'','z:\users\muhackel\documents\ede\dev5213cf'
 _StateHistory=EDITFILE,'Z:\Documents\ede\dev5213cf\m5213.cmd','Z:\Documents\ede\dev5213cf\m5213.lc','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\vtbl.c','Z:\Documents\ede\dev5213cf\isr.c','Z:\Documents\ede\dev5213cf\isr.h','Z:\Documents\ede\dev5213cf\types.h','Z:\Documents\ede\dev5213cf\ips.h','Z:\Documents\ede\dev5213cf\tools.c','Z:\Documents\ede\dev5213cf\tools.h'
-_StateHistory=DOCUMENTVISIT,'40          34          Z:\Documents\ede\dev5213cf\tools.c','22          55          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','13          2           Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','22          56          Z:\Documents\ede\dev5213cf\tools.c','197         37          Z:\Documents\ede\dev5213cf\ips.h','7           1           Z:\Documents\ede\dev5213cf\tools.h','22          48          Z:\Documents\ede\dev5213cf\ips.h'
+_StateHistory=DOCUMENTVISIT,'32          42          Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','81          1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c','1           1           Z:\Users\muhackel\Documents\ede\dev5213cf\echo.mak','1           1           \\\Mac\HOME\Documents\ede\dev5213cf\main.c'
 _StateDocumentVisit=10
 
 [Editor]
+_RestoreSysFlags=0x43097fca, 0xfffffffc, 0
+_RestoreSysFlags=0x40010005, 0xffffffff, 1
+CollapseMode=0x13080610
 VCSProject=''
 VCSProjectPath=''
 VCSProjectLocalPath=''
@@ -30,8 +35,23 @@ ToolDeleteList
 ToolAddCmd='$_custom_tool_$_1','API Database Editor',1342177312,'cwtedit.exe'
 
 [Compiler]
-TagSetFile=''
-BrowseSetFile=''
+TagSetCmd='"${HOME}${WTAGS}" -oc -d -t"${TAGFILE}.tag" -p"${TAGFILE}.ptg"',0x8000060
+BrowseSetFile='Z:\Users\muhackel\Documents\ede\dev5213cf\echo.ptg'
+TagSetFile='Z:\Users\muhackel\Documents\ede\dev5213cf\echo.tag'
+CompilerAddCmdEx='TASKING s','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING s',
+CompilerAddCmdEx='TASKING asm','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING asm',
+CompilerAddCmdEx='TASKING cxx','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING cxx',
+CompilerAddCmdEx='$_cw_proj_hash_$','',1073741920,'',1073741920,'!EdeExecBuild()',1073741984,'',0,'!EdeExecRebuild()',1073741984,'',0,'!EdeExecDebug()',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err','%x'
+CompilerAddResponse='$_cw_proj_hash_$',
+CompilerAddCmdEx='TASKING 68k','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING 68k',
+CompilerAddCmdEx='TASKING cpp','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING cpp',
+CompilerAddCmdEx='TASKING c','!EdeExecCompile()',1073741920,'!EdeExecCompile()',1073741920,'',1073741984,'',0,'',1073741984,'',0,'',1073741856,'',0,'_TaskingErrorInfo','','','z:\users\muhackel\documents\ede\dev5213cf\echo.err',''
+CompilerAddResponse='TASKING c',
 CompilerNewExt=.v
 CompilerNewExt=.src
 CompilerNewExt=.htm
@@ -63,7 +83,6 @@ CompilerNewExt=.nrx
 CompilerNewExt=.xml
 CompilerNewExt=.sqlj
 CompilerNewExt=.java
-TagSetCmd='"${HOME}${WTAGS}" -oc -d -t"${TAGFILE}.tag" -p"${TAGFILE}.ptg"',0x8000060
 
 [VersionControl:PVCS]
 VCSSetCmd=VCS_CHECKIN_ID,'put -n -T@"%Q" -M@"%Q" "%b%e"',0x8000040
@@ -81,24 +100,23 @@ VCSSetCmd=VCS_ADD_ID,'vcs -i -t@"%Q" "%b%e"',0x8000040
 VCSSetCmd=VCS_REMOVE_ID,'del /f "%b%{??v|___}e"',0x8000040
 
 [Files]
-.\cstart.asm
-.\main.c
-.\m5213.cmd
-.\m5213.lc
-.\types.h
-.\vtbl.c
 .\isr.c
-.\isr.h
-.\ips.h
+.\main.c
 .\tools.c
+.\vtbl.c
+.\ips.h
+.\isr.h
 .\tools.h
-
+.\types.h
+.\cstart.asm
+.\echo.lc
+.\m5213.lc
 
 [Ede]
-Toolchain=c:\program files\tasking\c68k v10.0\etc\c68k.dol
-ToolchainName=TASKING Tools for 68K/ColdFire v10.0 r4
-ProjectDir=z:\documents\ede\dev5213cf
-EdeVersion=3.4r4 (Build 123)
+Toolchain=c:\program files\tasking\c68k v10.0r8\etc\c68k.dol
+ToolchainName=TASKING Tools for 68K/ColdFire v10.0r8
+ProjectDir=z:\users\muhackel\documents\ede\dev5213cf
+EdeVersion=99.9r9 (Build 150)
 CodeWrightVersion=6.5b
 DefBuildSettings=True
 SaveFiles=True
@@ -112,6 +130,9 @@ UserMakefileName=
 UseMakeOptions=False
 MakeOptions=
 CheckTarget=True
+ExtDebugger=False
+ExtDebuggerName=
+UseDOSShell=False
 SaveOptionMethod=0
 SaveOptionFileName=
 LoadOptionFileName=
@@ -132,14 +153,20 @@ LibDir1=$(PRODDIR)\rtlibs
 Cpu=MCF5213
 CompOptim=CompOptno
 LkExtCommandFile=1
-LkExtCommandFileName=z:\documents\ede\dev5213cf\m5213.lc
+LkExtCommandFileName=z:\users\muhackel\documents\ede\dev5213cf\m5213.lc
 XvwSim=0
-XvwBdm=1
+XvwBdm_Multilink=1
 XvwUsb=1
 XvwNone=0
 XvwSerialPort=XvwUsb1
-XvwPlaybackEmulator=z:\documents\ede\dev5213cf\m5213.cmd
+XvwPlaybackEmulator=z:\users\muhackel\documents\ede\dev5213cf\m5213.cmd
 XvwPlaybackStepByStep=1
 
 [Options]
 FileList=
+
+[Project]
+ConfigSetLinkDBFilename='C:\Users\muhackel\AppData\Roaming\TASKING\SW001024\v10.0r8\cwright.ldb'
+ConfigSetMarkDBFilename='C:\Users\muhackel\AppData\Roaming\TASKING\SW001024\v10.0r8\cwright.mrk'
+ConfigSetSymbolDBFilename='Z:\Users\muhackel\Documents\ede\dev5213cf\echo.sbl'
+EditSetPath=''

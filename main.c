@@ -7,7 +7,7 @@ void main(void)
 {
 systeminit();
 uart0init(SYSTEMCLOCK, BAUD);
-writeLine("asdf");
+writeLine("Dies ist ein Test\n");
 while(1){
 writeUART(readUART());
 }
