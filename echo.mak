@@ -6,11 +6,7 @@
 #
 
 PROJ    = echo
-<<<<<<< HEAD
-PROJDIR = z:\users\muhackel\documents\ede\dev5213cf
-=======
-PROJDIR = y:\documents\arbeit\mcf5213\dev5213cf
->>>>>>> origin/master
+PROJDIR = y:\documents\ede\dev5213cf
 PRODDIR = c:\program files\tasking\c68k v10.0r8
 
 BINDIR  = $(PRODDIR)\bin
@@ -21,10 +17,9 @@ LIBSUBDIR=lib5206e
 
 OPT_CC  = -S "$(PRODDIR)\rtlibs\$(LIBSUBDIR)\inc" -d -no -do -q -pw
 OPT_AS  = -bw -d -S"$(PRODDIR)\rtlibs\$(LIBSUBDIR)\inc"
-<<<<<<< HEAD
-OPT_LK  = -L "$(PRODDIR)\rtlibs\lib5206e\lib\lib5206e" -c "z:\users\muhackel\documents\ede\dev5213cf\m5213.lc"
+OPT_LK  = -L "$(PRODDIR)\rtlibs\lib5206e\lib\lib5206e" -c "y:\documents\arbeit\mcf5213\dev5213cf\m5213.lc"
 OPT_OP  = -d  abs
-OPT_XVW = -tcfg "bdmmlcf.cfg" -D dev,usb1 -C 5213 -i --load_application_download=true --load_application_signal=true --load_application_program_reset=true --load_application_target_reset=false --load_application_goto_main=true -T "z:\users\muhackel\documents\ede\dev5213cf\m5213.cmd" -b 16 -a 16 -s 26
+OPT_XVW = -tcfg "bdmmlcf.cfg" -D dev,usb1 -C 5213 -i --load_application_download=true --load_application_signal=true --load_application_program_reset=true --load_application_target_reset=false --load_application_goto_main=true -T "y:\documents\arbeit\mcf5213\dev5213cf\m5213.cmd" -b 16 -a 16 -s 26
 
 all : "$(PROJ).abs"
 
@@ -38,24 +33,6 @@ endif
 	EOF
 
 "main.ol" : "main.c" "tools.h" "types.h" "ips.h" <1459235027>
-=======
-OPT_LK  = -L "$(PRODDIR)\rtlibs\lib5206e\lib\lib5206e" -c "y:\documents\arbeit\mcf5213\dev5213cf\m5213.lc"
-OPT_OP  = -d  abs
-OPT_XVW = -tcfg "bdmmlcf.cfg" -D dev,usb1 -C 5213 -i --load_application_download=true --load_application_signal=true --load_application_program_reset=true --load_application_target_reset=false --load_application_goto_main=true -T "y:\documents\arbeit\mcf5213\dev5213cf\m5213.cmd" -b 16 -a 16 -s 26
-
-all : "$(PROJ).abs"
-
-"cstart.ol" : "cstart.asm" <1460361348>
-	@echo Assembling "cstart.asm"
-	ifdef BUILD_VERBOSE
-	@echo "$(PRODDIR)\bin\asm5213.exe" "cstart.asm" $(OPT_AS)
-endif
-	@"$(PRODDIR)\bin\asm5213.exe" "cstart.asm" -opfile <<EOF
-	$(EMPTY) $(OPT_AS)
-	EOF
-
-"main.ol" : "main.c" "tools.h" "types.h" "ips.h" <1460361348>
->>>>>>> origin/master
 	@echo Compiling "main.c"
 	ifdef BUILD_VERBOSE
 	@echo "$(PRODDIR)\bin\c5213.exe" "main.c" $(OPT_CC)
@@ -64,7 +41,6 @@ endif
 	$(EMPTY) $(OPT_CC)
 	EOF
 
-<<<<<<< HEAD
 "tools.ol" : "tools.c" "tools.h" "types.h" "ips.h" <1444922210>
 	@echo Compiling "tools.c"
 	ifdef BUILD_VERBOSE
@@ -92,37 +68,7 @@ endif
 	$(EMPTY) $(OPT_AS)
 	EOF
 
-"$(PROJ).ab" : "isr.ol" "main.ol" "tools.ol" "vtbl.ol" "cstart.ol" <1459235093>
-=======
-"vtbl.ol" : "vtbl.c" "isr.h" <1460361348>
-	@echo Compiling "vtbl.c"
-	ifdef BUILD_VERBOSE
-	@echo "$(PRODDIR)\bin\c5213.exe" "vtbl.c" $(OPT_CC)
-endif
-	@"$(PRODDIR)\bin\c5213.exe" "vtbl.c" -opfile <<EOF
-	$(EMPTY) $(OPT_CC)
-	EOF
-
-"isr.ol" : "isr.c" "isr.h" "types.h" <1460361348>
-	@echo Compiling "isr.c"
-	ifdef BUILD_VERBOSE
-	@echo "$(PRODDIR)\bin\c5213.exe" "isr.c" $(OPT_CC)
-endif
-	@"$(PRODDIR)\bin\c5213.exe" "isr.c" -opfile <<EOF
-	$(EMPTY) $(OPT_CC)
-	EOF
-
-"tools.ol" : "tools.c" "tools.h" "types.h" "ips.h" <1460361348>
-	@echo Compiling "tools.c"
-	ifdef BUILD_VERBOSE
-	@echo "$(PRODDIR)\bin\c5213.exe" "tools.c" $(OPT_CC)
-endif
-	@"$(PRODDIR)\bin\c5213.exe" "tools.c" -opfile <<EOF
-	$(EMPTY) $(OPT_CC)
-	EOF
-
-"$(PROJ).ab" : "cstart.ol" "main.ol" "vtbl.ol" "isr.ol" "tools.ol" <1460361348>
->>>>>>> origin/master
+"$(PROJ).ab" : "isr.ol" "main.ol" "tools.ol" "vtbl.ol" "cstart.ol" <1469523527>
 	@echo Linking File $@
 	ifdef BUILD_VERBOSE
 	@echo "$(PRODDIR)\bin\llink.exe" $(match .ol $!) $(match .ln $!) $(match .lln $!) $(OPT_LK) -o $@
@@ -132,11 +78,7 @@ endif
 	$(EMPTY) $(OPT_LK) -o $@
 	EOF
 
-<<<<<<< HEAD
 "$(PROJ).abs" : "$(PROJ).ab" <1444922210>
-=======
-"$(PROJ).abs" : "$(PROJ).ab" <1460361348>
->>>>>>> origin/master
 	@echo Generating Form IEEE 695 file $@
 	ifdef BUILD_VERBOSE
 	@echo "$(PRODDIR)\bin\form695.exe" $! $(OPT_OP) -o $@
@@ -152,19 +94,11 @@ endif
 
 clean :
 	@echo Deleting intermediate files and output files for project '$(PROJ)'.
-<<<<<<< HEAD
 	@$(exist "isr.ol" del "isr.ol")
 	@$(exist "main.ol" del "main.ol")
 	@$(exist "tools.ol" del "tools.ol")
 	@$(exist "vtbl.ol" del "vtbl.ol")
 	@$(exist "cstart.ol" del "cstart.ol")
-=======
-	@$(exist "cstart.ol" del "cstart.ol")
-	@$(exist "main.ol" del "main.ol")
-	@$(exist "vtbl.ol" del "vtbl.ol")
-	@$(exist "isr.ol" del "isr.ol")
-	@$(exist "tools.ol" del "tools.ol")
->>>>>>> origin/master
 	@$(exist "$(PROJ).ab" del "$(PROJ).ab")
 	@$(exist "$(PROJ).abs" del "$(PROJ).abs")
 
