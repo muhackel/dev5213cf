@@ -3,6 +3,7 @@
 **/
 #include "isr.h"
 #include "types.h"
+#include "tools.h"
 
 _IH void
 AccessErrorIsr()
@@ -145,7 +146,7 @@ DMA3TransferCompleteIsr()
 _IH void 
 UART0Isr() 
 {
-  ;
+  writeUART(readUART());
 }
 
 _IH void 

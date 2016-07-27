@@ -9,7 +9,7 @@ systeminit();
 uart0init(SYSTEMCLOCK, BAUD);
 writeLine("Dies ist ein Test\n");
 while(1){
-writeUART(readUART());
+;
 }
 
 }

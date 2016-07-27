@@ -23,7 +23,7 @@ OPT_XVW = -tcfg "bdmmlcf.cfg" -D dev,usb1 -C 5213 -i --load_application_download
 
 all : "$(PROJ).abs"
 
-"isr.ol" : "isr.c" "isr.h" "types.h" <1444922210>
+"isr.ol" : "isr.c" "isr.h" "types.h" "tools.h" <1469608258>
 	@echo Compiling "isr.c"
 	ifdef BUILD_VERBOSE
 	@echo "$(PRODDIR)\bin\c5213.exe" "isr.c" $(OPT_CC)
